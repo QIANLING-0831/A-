@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>流程图</title>
+<style>
+  body {
+    margin: 0;
+    padding: 36px 24px 48px;
+    background: #ffffff;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #1f2d3d;
+  }
+  h1 {
+    text-align: center;
+    font-size: 26px;
+    margin: 0 0 28px;
+    color: #1d3557;
+  }
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .step {
+    width: 620px;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    border: 2px solid #2f6fed;
+    border-radius: 10px;
+    background: #f3f7ff;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.55;
+    box-shadow: 0 2px 6px rgba(47, 111, 237, 0.12);
+  }
+  .arrow {
+    color: #2f6fed;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+  }
+  .branch-title {
+    margin: 8px 0 4px;
+    font-size: 17px;
+    color: #2f6fed;
+  }
+  .branch {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    max-width: 900px;
+  }
+  .branch .step {
+    width: 164px;
+    padding: 12px 8px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  .note {
+    margin-top: 26px;
+    text-align: center;
+    color: #7a8699;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <h1>AIAgent 智能体概念热度榜自动化工作流</h1>
+  <div class="flow">
+    <div class="step">每天 11:00（北京时间）触发<br>窗口内定时器 / Windows 任务计划</div>
+    <div class="arrow">↓</div>
+    <div class="step">抓取东方财富 BK0809<br>AI智能体概念板块成分股</div>
+    <div class="arrow">↓</div>
+    <div class="step">并发抓取每只股票<br>近 1 天新闻提及数与关键新闻链接</div>
+    <div class="arrow">↓</div>
+    <div class="step">计算综合分<br>成交额 40% + 涨跌幅 30%<br>资金净流入 20% + 新闻提及 10%</div>
+    <div class="arrow">↓</div>
+    <div class="step">按综合分排序，取 Top10</div>
+    <div class="arrow">↓</div>
+    <div class="step">生成 49 字以内摘要<br>输出 Markdown / JSON 报告</div>
+    <div class="arrow">↓</div>
+    <div class="branch-title">推送至已启用渠道</div>
+    <div class="branch">
+      <div class="step">企业微信</div>
+      <div class="step">飞书</div>
+      <div class="step">钉钉</div>
+      <div class="step">Telegram</div>
+      <div class="step">邮件</div>
+    </div>
+    <div class="arrow">↓</div>
+    <div class="step">窗口展示 Top10<br>报告落盘 reports/</div>
+  </div>
+  <div class="note">数据源：东方财富公开接口 · 综合分按板块内百分位归一化</div>
+</body>
+</html>

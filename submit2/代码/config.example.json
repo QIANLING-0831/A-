@@ -1,0 +1,52 @@
+{
+  "board": {
+    "code": "BK0809",
+    "name": "AI智能体"
+  },
+  "scoring": {
+    "top_n": 10,
+    "news_page_size": 50,
+    "news_days": 1,
+    "news_link_count": 3,
+    "weights": {
+      "turnover": 40,
+      "change": 30,
+      "net_inflow": 20,
+      "news": 10
+    }
+  },
+  "schedule": {
+    "run_hour": 11,
+    "run_minute": 0,
+    "run_on_start": false
+  },
+  "push": {
+    "wecom": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "feishu": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "dingtalk": {
+      "enabled": false,
+      "webhook_url": ""
+    },
+    "telegram": {
+      "enabled": false,
+      "bot_token": "",
+      "chat_id": ""
+    },
+    "email": {
+      "enabled": false,
+      "smtp_host": "smtp.qq.com",
+      "smtp_port": 465,
+      "use_ssl": true,
+      "username": "",
+      "password": "",
+      "from_addr": "",
+      "to_addrs": []
+    }
+  }
+}

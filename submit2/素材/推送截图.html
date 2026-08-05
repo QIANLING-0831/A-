@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>企业微信推送截图</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e6e9ed;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #202227;
+  }
+  .app {
+    display: flex;
+    width: 1280px;
+    height: 900px;
+    background: #f7f7f7;
+  }
+  .sidebar {
+    width: 280px;
+    border-right: 1px solid #d9dce1;
+    background: #f7f7f7;
+  }
+  .sidebar-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #0b5bd3;
+    border-bottom: 1px solid #e2e5e9;
+  }
+  .chat-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #eceef0;
+  }
+  .chat-item.active {
+    background: #e8f1ff;
+  }
+  .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #2f6fed, #19b5e5);
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex: none;
+  }
+  .chat-meta {
+    flex: 1;
+    min-width: 0;
+    margin-left: 10px;
+  }
+  .chat-name {
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .chat-last {
+    font-size: 12px;
+    color: #8a919c;
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .chat-time {
+    font-size: 11px;
+    color: #a2a9b3;
+    margin-left: 8px;
+  }
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #f2f3f5;
+  }
+  .chat-header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid #e2e5e9;
+    background: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .chat-header span {
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #7a8699;
+    background: #f0f2f5;
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+  .messages {
+    flex: 1;
+    padding: 18px 26px;
+    overflow: hidden;
+  }
+  .date-divider {
+    text-align: center;
+    color: #9aa1ab;
+    font-size: 12px;
+    margin: 6px 0 16px;
+  }
+  .msg {
+    display: flex;
+    align-items: flex-start;
+  }
+  .msg .avatar {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+  .bubble {
+    max-width: 780px;
+    margin-left: 10px;
+    background: #ffffff;
+    border: 1px solid #e4e6eb;
+    border-radius: 6px;
+    padding: 14px 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  .bubble .title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1d3557;
+    margin-bottom: 8px;
+  }
+  .bubble .meta {
+    font-size: 12px;
+    color: #7a8699;
+    margin-bottom: 10px;
+  }
+  .stock-line {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .stock-line b {
+    color: #d64541;
+  }
+  .news {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #2f6fed;
+    line-height: 1.7;
+  }
+  .input-bar {
+    height: 64px;
+    background: #ffffff;
+    border-top: 1px solid #e2e5e9;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+  }
+  .input-placeholder {
+    flex: 1;
+    height: 34px;
+    background: #f2f3f5;
+    border-radius: 4px;
+    color: #a2a9b3;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+  .watermark {
+    position: fixed;
+    right: 14px;
+    bottom: 10px;
+    font-size: 11px;
+    color: #b6bcc6;
+  }
+</style>
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <div class="sidebar-header">企业微信</div>
+      <div class="chat-item active">
+        <div class="avatar">AI</div>
+        <div class="chat-meta">
+          <div class="chat-name">AI智能体热度榜机器人</div>
+          <div class="chat-last">AI智能体 概念热度榜 Top10</div>
+        </div>
+        <div class="chat-time">11:00</div>
+      </div>
+      <div class="chat-item">
+        <div class="avatar" style="background:#6c8ebf">热</div>
+        <div class="chat-meta">
+          <div class="chat-name">A股热点监控群</div>
+          <div class="chat-last">[群机器人] 日报已推送</div>
+        </div>
+        <div class="chat-time">昨天</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="chat-header">AI智能体热度榜机器人<span>群机器人</span></div>
+      <div class="messages">
+        <div class="date-divider">2026年8月1日 11:00</div>
+        <div class="msg">
+          <div class="avatar">AI</div>
+          <div class="bubble">
+            <div class="title">AI智能体 概念热度榜 Top10</div>
+            <div class="meta">数据源：东方财富 AI智能体（BK0809）· 共 151 只成分股</div>
+            <div class="stock-line"><b>1.</b> 蓝色光标（300058）成交 85.53 亿 +19.98% 净流入 23.94 亿</div>
+            <div class="stock-line"><b>2.</b> 昆仑万维（300418）成交 60.66 亿 +20.00% 净流入 10.34 亿</div>
+            <div class="stock-line"><b>3.</b> 中文在线（300364）成交 20.54 亿 +20.01% 净流入 4.87 亿</div>
+            <div class="stock-line"><b>4.</b> 协创数据（300857）成交 70.14 亿 +15.13% 净流入 2.36 亿</div>
+            <div class="stock-line"><b>5.</b> 中控技术（688777）成交 30.98 亿 +15.25% 净流入 3.17 亿</div>
+            <div class="stock-line"><b>6.</b> 锐捷网络（301165）成交 34.95 亿 +15.69% 净流入 1.53 亿</div>
+            <div class="stock-line"><b>7.</b> 利欧股份（002131）成交 37.62 亿 +9.91% 净流入 11.44 亿</div>
+            <div class="stock-line"><b>8.</b> 鼎捷数智（300378）成交 12.92 亿 +16.84% 净流入 2.00 亿</div>
+            <div class="stock-line"><b>9.</b> 宏景科技（301396）成交 10.32 亿 +20.00% 净流入 3.68 亿</div>
+            <div class="stock-line"><b>10.</b> 万兴科技（300624）成交 16.21 亿 +14.34% 净流入 1.35 亿</div>
+            <div class="news">
+              关键新闻：<br>
+              中文在线：https://finance.eastmoney.com/a/202607313828562689.html<br>
+              宏景科技：https://finance.eastmoney.com/a/202607313828519553.html
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="input-bar">
+        <div class="input-placeholder">输入消息...</div>
+      </div>
+    </div>
+  </div>
+  <div class="watermark">示例截图（模拟数据）</div>
+</body>
+</html>
