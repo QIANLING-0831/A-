@@ -4,7 +4,7 @@
 
 <p align="center">从板块行情到 Top10 摘要，再到多渠道推送，让每日信息整理形成完整工作流。</p>
 
-<p align="center"><img src="https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-fb7185?style=flat-square&amp;labelColor=172033" alt="docs: 中文"> <img src="https://img.shields.io/badge/maintainer-QIANLING-0831-fb7185?style=flat-square&amp;labelColor=172033" alt="maintainer: QIANLING-0831"> </p>
+<p align="center"><img src="https://img.shields.io/badge/docs-%E4%B8%AD%E6%96%87-fb7185?style=flat-square&amp;labelColor=172033" alt="docs: 中文"> <img src="https://img.shields.io/badge/maintainer-QIANLING--0831-fb7185?style=flat-square&amp;labelColor=172033" alt="maintainer: QIANLING-0831"> </p>
 
 <p align="center"><a href="#工作流">工作流</a> &nbsp; · &nbsp; <a href="#快速开始">快速开始</a> &nbsp; · &nbsp; <a href="#调度与验证">调度与验证</a> &nbsp; · &nbsp; <a href="#交付物">交付物</a></p>
 
